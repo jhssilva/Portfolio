@@ -1,8 +1,11 @@
 import "./App.css";
 import React, { useState } from "react";
+import picture from "./resources/img/Lisboa.jpeg";
 
 function App() {
   const [activeElementId, setActiveElementId] = useState(1);
+  const resumeAddress =
+    "https://docs.google.com/document/d/13LLI6V8zva_zG7_KWLYqLB3d-W6YoySCr9GONgwShBM/edit?usp=sharing";
 
   const listControls = [
     { id: 1, dataId: "home", icon: "fas fa-home" },
@@ -21,7 +24,9 @@ function App() {
             (checkIfHasToDisplayCurrentSection(1) ? "active" : "")
           }
           id="home"
-        ></header>
+        >
+          <Header />{" "}
+        </header>
         <main>
           <section
             className={
@@ -53,6 +58,40 @@ function App() {
           ></section>
         </main>
         <Controls />
+      </div>
+    );
+  };
+
+  const Header = () => {
+    return (
+      <div className="header-content">
+        <div className="left-header">
+          <div className="h-shape"></div>
+          <div className="image">
+            <img src={picture} alt="" />
+          </div>
+        </div>
+        <div className="right-header">
+          <h1 className="name">
+            Hi, I'm <span className="name">Hugo Silva.</span> Software Engineer.
+          </h1>
+          <p>
+            A junior software engineer with 3 years of experience in full-stack
+            development, teamwork, cross-functional communication, technical
+            troubleshooting, and debugging. A collaborative and communicative
+            developer and engineer with experience in the hardware and software
+            sides of technology and specialized in object-oriented programming
+            languages
+          </p>
+          <div className="btn-con">
+            <a href={resumeAddress} className="main-btn">
+              <span className="btn-text">Download CV</span>
+              <span className="btn-icon">
+                <i className="fas fa-download"></i>
+              </span>
+            </a>
+          </div>
+        </div>
       </div>
     );
   };
