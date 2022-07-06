@@ -152,12 +152,7 @@ function App() {
   const About = () => {
     return (
       <div>
-        <div className="main-title">
-          <h2>
-            About <span>me</span>
-            <span className="bg-text">my stats</span>
-          </h2>
-        </div>
+        <MainTitle headerBegin="About" headerEnd="me" text="my stats" />
         <div className="about-container">
           <div className="left-about">
             <h4>Information About me</h4>
@@ -277,11 +272,52 @@ function App() {
     );
   };
 
-  const Portfolio = () => {};
+  const Portfolio = () => {
+    return (
+      <div>
+        <MainTitle headerBegin="My" headerEnd="Portfolio" text="My Work" />
+        <p className="port-text">
+          Here is some of my work that I've done in various programming
+          languages.
+        </p>
+        <div className="portfolios">
+          <PortfolioItem />
+        </div>
+      </div>
+    );
+  };
+
+  const PortfolioItem = (props) => {
+    return (
+      <div className="portfolio-item">
+        <div className="image">{"image"}</div>
+        <div className="hover-item">
+          <h3>Project Source</h3>
+          <div className="icons">
+            <a href={"www.google.com"} target="_blank">
+              <i className="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    );
+  };
 
   const Blogs = () => {};
 
   const Contacts = () => {};
+
+  const MainTitle = (props) => {
+    const { headerBegin, headerEnd, text } = props;
+    return (
+      <div className="main-title">
+        <h2>
+          {headerBegin} <span>{headerEnd}</span>
+          <span className="bg-text">{text}</span>
+        </h2>
+      </div>
+    );
+  };
 
   const checkIfHasToDisplayCurrentSection = (id) => {
     if (id === activeElementId) {
