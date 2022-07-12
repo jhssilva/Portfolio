@@ -417,6 +417,7 @@ section {
 }
 
 .port-text {
+  margin-top: 3rem;
   padding: 2rem 0;
   text-align: center;
 }

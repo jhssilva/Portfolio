@@ -1,15 +1,64 @@
 import React from "react";
 import MainTitle from "./MainTitle";
+import PongGame from "../resources/img/PongGame.png";
+import RestauranteChuva from "../resources/img/RestauranteChuva.jpeg";
+import TicTacToe from "../resources/img/TicTacToe.png";
+import Snake from "../resources/img/Snake.png";
+import FlappyBird from "../resources/img/FlappyBird.png";
+import Bomberman from "../resources/img/Bomberman.png";
 
 const Portfolio = () => {
+  const listPortfolioItems = [
+    {
+      id: 1,
+      title: "Pong Game",
+      endpoint: "https://github.com/jhssilva/PongGame",
+      img: <PongGame />,
+    },
+    {
+      id: 2,
+      title: "Restaurante Chuva",
+      endpoint: "https://github.com/jhssilva/RestauranteChuva",
+      img: <RestauranteChuva />,
+    },
+    {
+      id: 3,
+      title: "Tic Tac Toe",
+      endpoint: "https://github.com/jhssilva/Tic-Tac-Toe",
+      img: <TicTacToe />,
+    },
+    {
+      id: 4,
+      title: "Snake Simulator",
+      endpoint: "https://github.com/jhssilva/SnakeSimulation",
+      img: <Snake />,
+    },
+    {
+      id: 5,
+      title: "Flappy Bird",
+      endpoint: "https://github.com/jhssilva/Flappy-Bird",
+      img: <FlappyBird />,
+    },
+    {
+      id: 6,
+      title: "Bomberman",
+      endpoint: "https://github.com/jhssilva/Bomberman",
+      img: <Bomberman />,
+    },
+  ];
+
   const PortfolioItem = (props) => {
+    const { endpoint, img, title } = props;
+    console.log(img);
     return (
       <div className="portfolio-item">
-        <div className="image">{"image"}</div>
-        <div className="hover-item">
-          <h3>Project Source</h3>
+        <div className="image">
+          <img src={img.type} alt={title} />
+        </div>
+        <div className="hover-items">
+          <h3>{title}</h3>
           <div className="icons">
-            <a href={"www.google.com"} target="_blank">
+            <a href={endpoint} target="_blank">
               <i className="fab fa-github"></i>
             </a>
           </div>
@@ -25,7 +74,14 @@ const Portfolio = () => {
         Here is some of my work that I've done in various programming languages.
       </p>
       <div className="portfolios">
-        <PortfolioItem />
+        {listPortfolioItems.map((item) => (
+          <PortfolioItem
+            key={item.id}
+            title={item.title}
+            endpoint={item.endpoint}
+            img={item.img}
+          />
+        ))}
       </div>
     </div>
   );
