@@ -12,7 +12,7 @@ const MainContent = () => {
   const [isDarkMode, setIsDarkMode] = useState(true);
 
   const descriptionAboutMe =
-    "A software engineer with 3 years of experience in full-stack development, teamwork, cross-functional communication, technical troubleshooting, and debugging. A collaborative and communicative developer and engineer with experience in the hardware and software sides of technology and specialized in object-oriented programming languages";
+    "A software engineer with 3 years of experience in full-stack development, teamwork, cross-functional communication, technical troubleshooting, and debugging. A collaborative and communicative developer and engineer with experience in the hardware and software sides of technology and specialized in full-stack development.";
 
   const checkIfHasToDisplayCurrentSection = (id) => {
     if (id === activeElementId) {
@@ -30,7 +30,7 @@ const MainContent = () => {
         }
         id="home"
       >
-        <Header />{" "}
+        <Header description={descriptionAboutMe} />{" "}
       </header>
       <main>
         <section

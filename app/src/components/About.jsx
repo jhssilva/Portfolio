@@ -10,35 +10,41 @@ const About = (props) => {
   const listAboutItems = [
     {
       id: 1,
-      title: "400+",
-      descriptionBegin: "Customer reviews",
-      descriptionEnd: "teste",
+      title: "3 years",
+      descriptionBegin: "Developing",
+      descriptionEnd: "Software",
     },
     {
       id: 3,
-      title: "400+",
-      descriptionBegin: "Customer reviews",
-      descriptionEnd: "teste",
+      title: "10+",
+      descriptionBegin: "Projects",
+      descriptionEnd: "",
     },
     {
       id: 2,
-      title: "400+",
-      descriptionBegin: "Customer reviews",
-      descriptionEnd: "d",
+      title: "Bachelor",
+      descriptionBegin: "Software",
+      descriptionEnd: "Engineer",
     },
     {
       id: 4,
-      title: "400+",
-      descriptionBegin: "Customer reviews",
-      descriptionEnd: "d",
+      title: "Master",
+      descriptionBegin: "Software",
+      descriptionEnd: "Engineer",
     },
   ];
 
   const listSkills = [
-    { id: 1, title: "HTML", description: "10%", classValue: "html" },
-    { id: 2, title: "", description: "", classValue: "" },
-    { id: 3, title: "", description: "", classValue: "" },
-    { id: 4, title: "", description: "", classValue: "" },
+    { id: 1, title: "HTML", description: "80%", classValue: "html" },
+    { id: 2, title: "CSS", description: "80%", classValue: "" },
+    { id: 3, title: "Javascript", description: "80%", classValue: "" },
+    { id: 4, title: "React", description: "80%", classValue: "" },
+    { id: 5, title: "Java", description: "80%", classValue: "" },
+    { id: 6, title: "C/C++", description: "80%", classValue: "" },
+    { id: 7, title: "Swift", description: "80%", classValue: "" },
+    { id: 7, title: "Node.js", description: "80%", classValue: "" },
+    { id: 8, title: "MongoDB", description: "80%", classValue: "" },
+    { id: 9, title: "SQL", description: "80%", classValue: "" },
   ];
 
   const AboutItem = (props) => {

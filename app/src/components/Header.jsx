@@ -2,7 +2,8 @@ import React from "react";
 import DownloadBtn from "./DownloadBtn";
 import picture from "../resources/img/Lisboa.jpeg";
 
-const Header = () => {
+const Header = (props) => {
+  const { description } = props;
   return (
     <div className="header-content">
       <div className="left-header">
@@ -15,14 +16,7 @@ const Header = () => {
         <h1 className="name">
           Hi, I'm <span className="name">Hugo Silva.</span> Software Engineer.
         </h1>
-        <p>
-          A junior software engineer with 3 years of experience in full-stack
-          development, teamwork, cross-functional communication, technical
-          troubleshooting, and debugging. A collaborative and communicative
-          developer and engineer with experience in the hardware and software
-          sides of technology and specialized in object-oriented programming
-          languages
-        </p>
+        <p>{description}</p>
         <DownloadBtn />
       </div>
     </div>
