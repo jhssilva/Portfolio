@@ -35,16 +35,21 @@ const About = (props) => {
   ];
 
   const listSkills = [
-    { id: 1, title: "HTML", description: "80%", classValue: "html" },
-    { id: 2, title: "CSS", description: "80%", classValue: "" },
-    { id: 3, title: "Javascript", description: "80%", classValue: "" },
-    { id: 4, title: "React", description: "80%", classValue: "" },
-    { id: 5, title: "Java", description: "80%", classValue: "" },
-    { id: 6, title: "C/C++", description: "80%", classValue: "" },
-    { id: 7, title: "Swift", description: "80%", classValue: "" },
-    { id: 7, title: "Node.js", description: "80%", classValue: "" },
-    { id: 8, title: "MongoDB", description: "80%", classValue: "" },
-    { id: 9, title: "SQL", description: "80%", classValue: "" },
+    { id: 1, title: "HTML", description: "95%", classValue: "html" },
+    { id: 2, title: "CSS", description: "90%", classValue: "css" },
+    {
+      id: 3,
+      title: "Javascript",
+      description: "85%",
+      classValue: "javascript",
+    },
+    { id: 4, title: "React", description: "60%", classValue: "react" },
+    { id: 5, title: "Java", description: "80%", classValue: "java" },
+    { id: 6, title: "C/C++", description: "85%", classValue: "c" },
+    { id: 7, title: "Swift", description: "80%", classValue: "swift" },
+    { id: 7, title: "Node.js", description: "70%", classValue: "node" },
+    { id: 8, title: "MongoDB", description: "55%", classValue: "mongodb" },
+    { id: 9, title: "SQL", description: "80%", classValue: "sql" },
   ];
 
   const AboutItem = (props) => {
@@ -61,9 +66,8 @@ const About = (props) => {
     );
   };
 
-  return (
-    <div>
-      <MainTitle headerBegin="About" headerEnd="me" text="my stats" />
+  const AboutContainer = () => {
+    return (
       <div className="about-container">
         <div className="left-about">
           <h4>Information About me</h4>
@@ -84,6 +88,11 @@ const About = (props) => {
           })}
         </div>
       </div>
+    );
+  };
+
+  const Stats = () => {
+    return (
       <div className="about-stats">
         <h4 className="stat-title">My Skills</h4>
         <div className="progress-bars">
@@ -100,6 +109,14 @@ const About = (props) => {
           })}
         </div>
       </div>
+    );
+  };
+
+  return (
+    <div>
+      <MainTitle headerBegin="About" headerEnd="me" text="my stats" />
+      <AboutContainer />
+      <Stats />
       <Timeline />
     </div>
   );
