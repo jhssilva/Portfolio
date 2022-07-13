@@ -10,16 +10,8 @@ const Contacts = () => {
           <span>Location</span>
         </div>
         <p>
-          <span>: London, United Kingdom</span>
+          <span>Paris, France</span>
         </p>
-      </div>
-    );
-  };
-
-  const ContactIcons = () => {
-    return (
-      <div className="contact-icons">
-        <ContactIcon />
       </div>
     );
   };
@@ -40,17 +32,27 @@ const Contacts = () => {
       <MainTitle headerBegin="Contact" headerEnd="Me" text="Contact Me" />
       <div className="contact-content-con">
         <div className="left-contact">
-          <h4>Contact me here</h4>
-          <p>Dadadadada</p>
+          <h4>Hugo Silva</h4>
+          <p>
+            I'm a software engineer, always opening to new opportunities to
+            grow!
+          </p>
+          <p>
+            Please don't hesitate reaching out to me. I'm hoping to know a
+            little bit more about you!
+          </p>
+          <div className="contact-info">
+            <Contact />
+          </div>
         </div>
-        <div className="contact-info">
-          <Contact />
-        </div>
-        <ContactIcons />
+
+        <ContactIcon />
         <div className="right-contact">
           <form action="" className="contact-form">
             <div className="input-control">
               <input type={"text"} required placeholder="Your Name" />
+            </div>
+            <div className="input-control">
               <input type={"email"} required placeholder="Your Email" />
             </div>
             <div className="input-control">
@@ -66,10 +68,14 @@ const Contacts = () => {
               />
             </div>
             <div className="submit-btn">
-              <a href="#" className="main-btn">
-                <span className="btn-text">Download CV</span>
+              <a
+                href="mailto:jhssilva96@gmail.com"
+                method="GET"
+                className="main-btn"
+              >
+                <span className="btn-text">Send Message!</span>
                 <span className="btn-icon">
-                  <i className="fas fa-download"></i>
+                  <i className="fas fa-message"></i>
                 </span>
               </a>
             </div>
