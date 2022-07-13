@@ -47,9 +47,9 @@ const About = (props) => {
     { id: 5, title: "Java", description: "80%", classValue: "java" },
     { id: 6, title: "C/C++", description: "85%", classValue: "c" },
     { id: 7, title: "Swift", description: "80%", classValue: "swift" },
-    { id: 7, title: "Node.js", description: "70%", classValue: "node" },
-    { id: 8, title: "MongoDB", description: "55%", classValue: "mongodb" },
-    { id: 9, title: "SQL", description: "80%", classValue: "sql" },
+    { id: 8, title: "Node.js", description: "70%", classValue: "node" },
+    { id: 9, title: "MongoDB", description: "55%", classValue: "mongodb" },
+    { id: 10, title: "SQL", description: "80%", classValue: "sql" },
   ];
 
   const AboutItem = (props) => {
