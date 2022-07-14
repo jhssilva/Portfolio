@@ -1,7 +1,63 @@
-import React from "react";
+import React, { useState } from "react";
 import MainTitle from "./MainTitle";
+import emailjs from "@emailjs/browser";
 
 const Contacts = () => {
+  const emptyFormContent = () => {
+    return {
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+    };
+  };
+
+  const [formContent, setFormContent] = useState(emptyFormContent());
+  const [sendingEmail, setSendingEmail] = useState(false);
+
+  const sendEmail = () => {
+    if (sendingEmail) return;
+    setSendingEmail(true);
+
+    const YOUR_SERVICE_ID = "service_k6hfvqg",
+      YOUR_TEMPLATE_ID = "template_odopr42",
+      YOUR_PUBLIC_KEY = "yrNijmJMiLOGQPg44";
+
+    emailjs
+      .send(YOUR_SERVICE_ID, YOUR_TEMPLATE_ID, formContent, YOUR_PUBLIC_KEY)
+      .then(
+        (response) => {
+          handleOnEmailSuccess(response);
+        },
+        (err) => {
+          handleOnEmailFailure();
+        }
+      );
+  };
+
+  const handleOnEmailSuccess = (response) => {
+    console.log("SUCCESS!", response.status, response.text);
+    setFormContent(emptyFormContent);
+    setSendingEmail(false);
+  };
+
+  const handleOnEmailFailure = (err) => {
+    console.log("FAILED...", err);
+    setSendingEmail(false);
+  };
+
+  const handleInputsChange = (event) => {
+    const { name, value } = event.target;
+    setFormContent((prev) => {
+      return { ...prev, [name]: value };
+    });
+  };
+
+  const handleFormSubmit = (event) => {
+    event.preventDefault();
+    sendEmail();
+  };
+
   const Contact = (props) => {
     return (
       <div className="contact-item">
@@ -48,36 +104,49 @@ const Contacts = () => {
 
         <ContactIcon />
         <div className="right-contact">
-          <form action="" className="contact-form">
+          <form onSubmit={handleFormSubmit} className="contact-form">
             <div className="input-control">
-              <input type={"text"} required placeholder="Your Name" />
+              <input
+                name="name"
+                type={"text"}
+                value={formContent.name}
+                onChange={handleInputsChange}
+                required
+                placeholder="Your Name"
+              />
             </div>
             <div className="input-control">
-              <input type={"email"} required placeholder="Your Email" />
+              <input
+                name="email"
+                type={"email"}
+                value={formContent.email}
+                onChange={handleInputsChange}
+                required
+                placeholder="Your Email"
+              />
             </div>
             <div className="input-control">
-              <input type={"text"} required placeholder="Enter Subject" />
+              <input
+                name="subject"
+                type={"text"}
+                value={formContent.subject}
+                onChange={handleInputsChange}
+                required
+                placeholder="Enter Subject"
+              />
             </div>
             <div className="input-control">
               <textarea
-                name=""
-                id=""
+                name="message"
                 cols="15"
                 rows="8"
                 placeholder="Message here..."
+                onChange={handleInputsChange}
+                value={formContent.message}
               />
             </div>
             <div className="submit-btn">
-              <a
-                href="mailto:jhssilva96@gmail.com"
-                method="GET"
-                className="main-btn"
-              >
-                <span className="btn-text">Send Message!</span>
-                <span className="btn-icon">
-                  <i className="fas fa-message"></i>
-                </span>
-              </a>
+              <input type="submit" disabled={sendingEmail} value="Send!" />
             </div>
           </form>
         </div>
