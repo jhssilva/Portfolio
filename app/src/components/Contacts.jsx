@@ -30,7 +30,7 @@ const Contacts = () => {
           handleOnEmailSuccess(response);
         },
         (err) => {
-          handleOnEmailFailure();
+          handleOnEmailFailure(err);
         }
       );
   };
