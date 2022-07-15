@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import MainTitle from "./MainTitle";
 import emailjs from "@emailjs/browser";
+import { useAlert } from "react-alert";
 
 const Contacts = () => {
+  const alert = useAlert();
+
   const emptyFormContent = () => {
     return {
       name: "",
@@ -36,13 +39,14 @@ const Contacts = () => {
   };
 
   const handleOnEmailSuccess = (response) => {
-    console.log("SUCCESS!", response.status, response.text);
+    alert.success("Thanks for taking the time to contact me!");
     setFormContent(emptyFormContent);
     setSendingEmail(false);
   };
 
   const handleOnEmailFailure = (err) => {
-    console.log("FAILED...", err);
+    alert.error("Ohhh Nooo! Could you please try once again?");
+    console.log("Error: " + err);
     setSendingEmail(false);
   };
 
