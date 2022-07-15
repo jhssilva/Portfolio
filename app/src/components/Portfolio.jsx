@@ -49,7 +49,6 @@ const Portfolio = () => {
 
   const PortfolioItem = (props) => {
     const { endpoint, img, title } = props;
-    console.log(img);
     return (
       <div className="portfolio-item">
         <div className="image">
@@ -58,7 +57,7 @@ const Portfolio = () => {
         <div className="hover-items">
           <h3>{title}</h3>
           <div className="icons">
-            <a href={endpoint} target="_blank">
+            <a href={endpoint} target="_blank" rel="noreferrer">
               <i className="fab fa-github"></i>
             </a>
           </div>
