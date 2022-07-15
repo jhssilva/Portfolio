@@ -150,7 +150,13 @@ const Contacts = () => {
               />
             </div>
             <div className="submit-btn">
-              <input type="submit" disabled={sendingEmail} value="Send!" />
+              <div className="submit-btn-container">
+                <input
+                  type="submit"
+                  disabled={sendingEmail}
+                  value="Send Message"
+                />
+              </div>
             </div>
           </form>
         </div>
