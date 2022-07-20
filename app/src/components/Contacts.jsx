@@ -2,9 +2,15 @@ import React, { useState } from "react";
 import MainTitle from "./MainTitle";
 import emailjs from "@emailjs/browser";
 import { useAlert } from "react-alert";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const Contacts = () => {
   const alert = useAlert();
+
+  const YOUR_SERVICE_ID = process.env.REACT_APP_EMAILJS_SERVICE_ID,
+    YOUR_TEMPLATE_ID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+    YOUR_PUBLIC_KEY = process.env.REACT_APP_EMAILJS_PUBLIC_KEY,
+    SITE_KEY = process.env.REACT_APP_RECAPTCHA_SITE_KEY;
 
   const emptyFormContent = () => {
     return {
@@ -12,6 +18,7 @@ const Contacts = () => {
       email: "",
       subject: "",
       message: "",
+      "g-recaptcha-response": "",
     };
   };
 
@@ -20,11 +27,13 @@ const Contacts = () => {
 
   const sendEmail = () => {
     if (sendingEmail) return;
-    setSendingEmail(true);
 
-    const YOUR_SERVICE_ID = "service_k6hfvqg",
-      YOUR_TEMPLATE_ID = "template_odopr42",
-      YOUR_PUBLIC_KEY = "yrNijmJMiLOGQPg44";
+    if (formContent["g-recaptcha-response"] === "") {
+      alert.info("Please confirm that you're a person!");
+      return;
+    }
+
+    setSendingEmail(true);
 
     emailjs
       .send(YOUR_SERVICE_ID, YOUR_TEMPLATE_ID, formContent, YOUR_PUBLIC_KEY)
@@ -46,7 +55,7 @@ const Contacts = () => {
 
   const handleOnEmailFailure = (err) => {
     alert.error("Ohhh Nooo! Could you please try once again?");
-    console.log("Error: " + err);
+    console.log("Error: ", err);
     setSendingEmail(false);
   };
 
@@ -54,6 +63,12 @@ const Contacts = () => {
     const { name, value } = event.target;
     setFormContent((prev) => {
       return { ...prev, [name]: value };
+    });
+  };
+
+  const handleOnChangeReCAPTCHA = (captchaValue) => {
+    setFormContent((prev) => {
+      return { ...prev, "g-recaptcha-response": captchaValue };
     });
   };
 
@@ -147,6 +162,12 @@ const Contacts = () => {
                 placeholder="Message here..."
                 onChange={handleInputsChange}
                 value={formContent.message}
+              />
+            </div>
+            <div className="input-control">
+              <ReCAPTCHA
+                sitekey={SITE_KEY}
+                onChange={handleOnChangeReCAPTCHA}
               />
             </div>
             <div className="submit-btn">
