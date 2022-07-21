@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, createRef } from "react";
 import MainTitle from "./MainTitle";
 import emailjs from "@emailjs/browser";
 import { useAlert } from "react-alert";
@@ -6,6 +6,7 @@ import ReCAPTCHA from "react-google-recaptcha";
 
 const Contacts = () => {
   const alert = useAlert();
+  const recaptchaRef = createRef();
 
   const YOUR_SERVICE_ID = process.env.REACT_APP_EMAILJS_SERVICE_ID,
     YOUR_TEMPLATE_ID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
@@ -34,6 +35,7 @@ const Contacts = () => {
     }
 
     setSendingEmail(true);
+    recaptchaRef.current.reset();
 
     emailjs
       .send(YOUR_SERVICE_ID, YOUR_TEMPLATE_ID, formContent, YOUR_PUBLIC_KEY)
@@ -166,6 +168,7 @@ const Contacts = () => {
             </div>
             <div className="input-control">
               <ReCAPTCHA
+                ref={recaptchaRef}
                 sitekey={SITE_KEY}
                 onChange={handleOnChangeReCAPTCHA}
               />
