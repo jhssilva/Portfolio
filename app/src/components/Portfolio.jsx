@@ -54,14 +54,14 @@ const Portfolio = () => {
         <div className="image">
           <img src={img.type} alt={title} />
         </div>
-        <div className="hover-items">
-          <h3>{title}</h3>
-          <div className="icons">
-            <a href={endpoint} target="_blank" rel="noreferrer">
+        <a href={endpoint} target="_blank" rel="noreferrer">
+          <div className="hover-items">
+            <h3>{title}</h3>
+            <div className="icons">
               <i className="fab fa-github"></i>
-            </a>
+            </div>
           </div>
-        </div>
+        </a>
       </div>
     );
   };
