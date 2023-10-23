@@ -1,11 +1,12 @@
 import React, { useState, createRef } from "react";
 import MainTitle from "./MainTitle";
 import emailjs from "@emailjs/browser";
-import { useAlert } from "react-alert";
 import ReCAPTCHA from "react-google-recaptcha";
+import { ToastContainer, toast } from "react-toastify";
 
-const Contacts = () => {
-  const alert = useAlert();
+const Contacts = (props) => {
+  const { isDarkMode } = props;
+  const layoutModeClass = useState(isDarkMode ? "dark" : "light");
   const recaptchaRef = createRef();
 
   const YOUR_SERVICE_ID = process.env.REACT_APP_EMAILJS_SERVICE_ID,
@@ -30,7 +31,17 @@ const Contacts = () => {
     if (sendingEmail) return;
 
     if (formContent["g-recaptcha-response"] === "") {
-      alert.info("Please confirm that you're a person!");
+      toast.info("Please confirm that you're a person!", {
+        position: "bottom-right",
+        autoClose: 2000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: layoutModeClass,
+      });
+
       return;
     }
 
@@ -50,13 +61,32 @@ const Contacts = () => {
   };
 
   const handleOnEmailSuccess = (response) => {
-    alert.success("Thanks for taking the time to contact me!");
+    toast.success("Thanks for taking the time to contact me!", {
+      position: "top-center",
+      autoClose: 2000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: layoutModeClass,
+    });
     setFormContent(emptyFormContent);
     setSendingEmail(false);
   };
 
   const handleOnEmailFailure = (err) => {
-    alert.error("Ohhh Nooo! Could you please try once again?");
+    toast.error("Ohhh Nooo! Could you please try once again?", {
+      position: "top-center",
+      autoClose: 2000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: layoutModeClass,
+    });
+
     console.log("Error: ", err);
     setSendingEmail(false);
   };

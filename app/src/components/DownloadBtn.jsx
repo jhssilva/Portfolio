@@ -1,6 +1,5 @@
 import React from "react";
-const resumeAddress =
-  "https://docs.google.com/document/d/13LLI6V8zva_zG7_KWLYqLB3d-W6YoySCr9GONgwShBM/edit?usp=sharing";
+import { resumeAddress } from "../utils/Information";
 
 const DownloadBtn = () => {
   return (

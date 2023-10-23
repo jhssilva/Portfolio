@@ -1,52 +1,8 @@
 import React from "react";
 import MainTitle from "./MainTitle";
-import PongGame from "../resources/img/PongGame.png";
-import RestauranteChuva from "../resources/img/RestauranteChuva.jpeg";
-import TicTacToe from "../resources/img/TicTacToe.png";
-import Snake from "../resources/img/Snake.png";
-import FlappyBird from "../resources/img/FlappyBird.png";
-import Bomberman from "../resources/img/Bomberman.png";
+import { listPortfolioItems } from "../utils/Information";
 
 const Portfolio = () => {
-  const listPortfolioItems = [
-    {
-      id: 1,
-      title: "Pong Game",
-      endpoint: "https://github.com/jhssilva/PongGame",
-      img: <PongGame />,
-    },
-    {
-      id: 2,
-      title: "Restaurante Chuva",
-      endpoint: "https://github.com/jhssilva/RestauranteChuva",
-      img: <RestauranteChuva />,
-    },
-    {
-      id: 3,
-      title: "Tic Tac Toe",
-      endpoint: "https://github.com/jhssilva/Tic-Tac-Toe",
-      img: <TicTacToe />,
-    },
-    {
-      id: 4,
-      title: "Snake Simulator",
-      endpoint: "https://github.com/jhssilva/SnakeSimulation",
-      img: <Snake />,
-    },
-    {
-      id: 5,
-      title: "Flappy Bird",
-      endpoint: "https://github.com/jhssilva/Flappy-Bird",
-      img: <FlappyBird />,
-    },
-    {
-      id: 6,
-      title: "Bomberman",
-      endpoint: "https://github.com/jhssilva/Bomberman",
-      img: <Bomberman />,
-    },
-  ];
-
   const PortfolioItem = (props) => {
     const { endpoint, img, title } = props;
     return (

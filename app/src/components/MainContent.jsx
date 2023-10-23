@@ -6,13 +6,11 @@ import DarkMode from "./DarkMode";
 import Blogs from "./Blogs";
 import Contacts from "./Contacts";
 import Controls from "./Controls";
+import { descriptionAboutMe } from "../utils/Information";
 
 const MainContent = () => {
   const [activeElementId, setActiveElementId] = useState(1);
   const [isDarkMode, setIsDarkMode] = useState(true);
-
-  const descriptionAboutMe =
-    "A software engineer with 3 years of experience in full-stack development, teamwork, cross-functional communication, technical troubleshooting, and debugging. A collaborative and communicative developer and engineer with experience in the hardware and software sides of technology and specialized in full-stack development.";
 
   const checkIfHasToDisplayCurrentSection = (id) => {
     if (id === activeElementId) {

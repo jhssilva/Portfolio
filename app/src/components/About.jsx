@@ -3,54 +3,10 @@ import MainTitle from "./MainTitle";
 import DownloadBtn from "./DownloadBtn";
 import ProgressBar from "./ProgressBar";
 import Timeline from "./Timeline";
+import { listAboutItems, listSkills } from "../utils/Information";
 
 const About = (props) => {
   const { description } = props;
-
-  const listAboutItems = [
-    {
-      id: 1,
-      title: "3 years",
-      descriptionBegin: "Developing",
-      descriptionEnd: "Software",
-    },
-    {
-      id: 3,
-      title: "10+",
-      descriptionBegin: "Projects",
-      descriptionEnd: "",
-    },
-    {
-      id: 2,
-      title: "Bachelor",
-      descriptionBegin: "Software",
-      descriptionEnd: "Engineer",
-    },
-    {
-      id: 4,
-      title: "Master",
-      descriptionBegin: "Software",
-      descriptionEnd: "Engineer",
-    },
-  ];
-
-  const listSkills = [
-    { id: 1, title: "HTML", description: "95%", classValue: "html" },
-    { id: 2, title: "CSS", description: "90%", classValue: "css" },
-    {
-      id: 3,
-      title: "Javascript",
-      description: "85%",
-      classValue: "javascript",
-    },
-    { id: 4, title: "React", description: "60%", classValue: "react" },
-    { id: 5, title: "Java", description: "80%", classValue: "java" },
-    { id: 6, title: "C/C++", description: "85%", classValue: "c" },
-    { id: 7, title: "Swift", description: "80%", classValue: "swift" },
-    { id: 8, title: "Node.js", description: "70%", classValue: "node" },
-    { id: 9, title: "MongoDB", description: "55%", classValue: "mongodb" },
-    { id: 10, title: "SQL", description: "80%", classValue: "sql" },
-  ];
 
   const AboutItem = (props) => {
     const { title, descriptionBegin, descriptionEnd } = props;

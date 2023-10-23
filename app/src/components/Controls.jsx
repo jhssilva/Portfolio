@@ -1,14 +1,8 @@
 import React from "react";
+import { listControls } from "../utils/Information";
 
 const Controls = (props) => {
   const { activeElementId, setActiveElementId } = props;
-  const listControls = [
-    { id: 1, dataId: "home", icon: "fas fa-home" },
-    { id: 2, dataId: "about", icon: "fas fa-user" },
-    { id: 3, dataId: "portfolio", icon: "fas fa-briefcase" },
-    { id: 4, dataId: "blogs", icon: "fas fa-newspaper" },
-    { id: 5, dataId: "contact", icon: "fas fa-envelope-open" },
-  ];
 
   return (
     <div className="controls">

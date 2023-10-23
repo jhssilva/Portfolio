@@ -1,0 +1,11 @@
+version: '1'
+services:
+  node:
+    image: node:21-alpine3.17
+    working_dir: /usr/app
+    command: sh -c "npm i && npm start"
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/usr/app/
+      - /usr/app/node_modules

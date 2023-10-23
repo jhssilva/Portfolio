@@ -1,34 +1,8 @@
 import React from "react";
 import MainTitle from "./MainTitle";
-import git from "../resources/img/git.jpeg";
-import linkedin from "../resources/img/linkedin.png";
-import resume from "../resources/img/resume.jpeg";
+import { blogList } from "../utils/Information";
 
 const Blogs = () => {
-  const blogList = [
-    {
-      id: 1,
-      header: "GitHub",
-      description: "Projects Repository",
-      img: git,
-      url: "https://github.com/jhssilva",
-    },
-    {
-      id: 2,
-      header: "Linkedin",
-      description: "Profissional Profile",
-      img: linkedin,
-      url: "https://www.linkedin.com/in/jhssilvaa/",
-    },
-    {
-      id: 3,
-      header: "Resume",
-      description: "Hugo Silva",
-      img: resume,
-      url: "https://docs.google.com/document/d/13LLI6V8zva_zG7_KWLYqLB3d-W6YoySCr9GONgwShBM/edit?usp=sharing",
-    },
-  ];
-
   const Blog = (props) => {
     const { img, header, description, url } = props;
     return (

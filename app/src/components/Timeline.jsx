@@ -1,32 +1,7 @@
 import React from "react";
+import { listTimelineItems } from "../utils/Information";
 
 const Timeline = () => {
-  const listTimelineItems = [
-    {
-      id: 1,
-      duration: "Sept 2021 - Current",
-      titleBegin: "Customer Success Engineer",
-      titleEnd: "Usercentrics",
-      description:
-        "Supports the customers by integrating software products like the Consent Management Platform (CMP) on the customer platform (e.g. Website, Applications).",
-    },
-    {
-      id: 2,
-      duration: "Feb 2020 - Aug 2021",
-      titleBegin: "Junior Solutions Developer",
-      titleEnd: "Truewind",
-      description:
-        "Collaborate with other teams analyzing requirements, and developing software for day-to-day platforms (e.g. Website and Mobile) using SCRUM methodology.",
-    },
-    {
-      id: 3,
-      duration: "2019 - 2020",
-      titleBegin: "Full Stack Developer",
-      titleEnd: "Enso Origins",
-      description: "Develop, test, and implement new software programs.",
-    },
-  ];
-
   const TimelineItem = (props) => {
     const { duration, titleBegin, titleEnd, description } = props;
 

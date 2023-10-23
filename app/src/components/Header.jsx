@@ -1,6 +1,6 @@
 import React from "react";
 import DownloadBtn from "./DownloadBtn";
-import picture from "../resources/img/Lisboa.jpeg";
+import picture from "../resources/img/MainPicture.png";
 
 const Header = (props) => {
   const { description } = props;
