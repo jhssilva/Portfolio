@@ -66,6 +66,10 @@ h4 {
   color: var(--color-header);
 }
 
+p {
+  color: var(--color-body);
+}
+
 section {
   min-height: 100vh;
   width: 100%;
@@ -471,9 +475,10 @@ section {
 
 //Portfolios
 .port-text {
-  margin-top: 3rem;
+  margin-top: 4rem;
   padding: 2rem 0;
   text-align: center;
+  color: var(--color-body);
 }
 
 .portfolios {
@@ -561,11 +566,11 @@ section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 2rem;
-  margin-top: 5rem;
+  margin-top: 6rem;
 
   .blog {
     position: relative;
-    background-color: var(--color-pallet-2);
+    background-color: var(--color-pallet-1);
     border-radius: 5px;
     box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
     transition: all 0.4s ease-in-out;
@@ -609,9 +614,10 @@ section {
       }
 
       p {
-        color: var(--color-pallet-1);
+        color: var(--color-pallet-2);
         line-height: 2rem;
         padding-bottom: 1rem;
+        font-weight: 500;
       }
     }
   }
@@ -620,7 +626,7 @@ section {
 //Contact section
 .contact-content-con {
   display: flex;
-  padding-top: 3.5rem;
+  padding-top: 5rem;
 
   .left-contact {
     flex: 2;
@@ -641,6 +647,7 @@ section {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        color: var(--color-body);
 
         p {
           margin: 0.3rem 0 !important;
@@ -713,7 +720,7 @@ section {
         border: none;
         background-color: var(--color-pallet-2);
         width: 100%;
-        color: var(--color-body);
+        color: var(--color-pallet-1);
         resize: none;
       }
     }
