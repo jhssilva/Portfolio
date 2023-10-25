@@ -8,9 +8,9 @@ import Contacts from "./Contacts";
 import Controls from "./Controls";
 import { descriptionAboutMe } from "../utils/Information";
 
-const MainContent = () => {
+const MainContent = (props) => {
   const [activeElementId, setActiveElementId] = useState(1);
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const { isDarkMode, setIsDarkMode } = props;
 
   const checkIfHasToDisplayCurrentSection = (id) => {
     if (id === activeElementId) {
@@ -20,7 +20,9 @@ const MainContent = () => {
   };
 
   return (
-    <div className={"main-content " + (isDarkMode ? "" : "light-mode")}>
+    <div
+      className={"main-content " + (isDarkMode ? "dark-mode" : "light-mode")}
+    >
       <header
         className={
           "container header " +

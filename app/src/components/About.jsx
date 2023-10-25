@@ -70,7 +70,7 @@ const About = (props) => {
 
   return (
     <div>
-      <MainTitle headerBegin="About" headerEnd="me" text="my stats" />
+      <MainTitle headerBegin="About" headerEnd="me" text="my information" />
       <AboutContainer />
       <Stats />
       <Timeline />
