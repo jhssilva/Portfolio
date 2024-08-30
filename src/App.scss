@@ -54,6 +54,7 @@ a {
 
 header {
   min-height: 100vh;
+  background-color: var(--color-primary);
   color: var(--color-header);
   overflow: hidden;
   padding: 0 !important;
@@ -73,75 +74,11 @@ p {
 section {
   min-height: 100vh;
   width: 100%;
-  position: absolute;
+  // position: absolute;
   left: 0;
   top: 0;
   padding: 3rem 18rem;
-}
-
-.container {
-  display: none;
-  transform: translateY(-100%) scale(0);
-  transition: all 0.4s ease-in-out;
   background-color: var(--color-primary);
-}
-
-.active {
-  display: block;
-  animation: appear 1s ease-in-out;
-  transform: translateY(0) scaleY(1);
-
-  @keyframes appear {
-    0% {
-      transform: translateY(-100%) scaleY(0);
-    }
-
-    100% {
-      transform: translateY(0) scaleY(1);
-    }
-  }
-}
-
-//Controls
-.controls {
-  position: fixed;
-  z-index: 10;
-  top: 50%;
-  right: 3%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  transform: translateY(-50%);
-
-  .control {
-    padding: 1rem;
-    cursor: pointer;
-    background-color: var(--color-pallet-2);
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0.7rem 0;
-    box-shadow: var(--box-shadow-1);
-
-    i {
-      font-size: 1.2rem;
-      color: var(--color-pallet-1);
-      pointer-events: none;
-    }
-  }
-
-  .active-btn {
-    background-color: var(--color-secondary);
-    transition: all 0.4s ease-in-out;
-
-    i {
-      color: var(--color-white);
-    }
-  }
 }
 
 .theme-btn {
@@ -189,7 +126,7 @@ section {
       position: absolute;
       left: 0;
       top: 0;
-      z-index: -1;
+      z-index: 0;
       clip-path: polygon(0 0, 46% 0, 79% 100%, 0% 100%);
     }
 
@@ -197,6 +134,7 @@ section {
       border-radius: var(--br-sm-2);
       height: 90%;
       width: 68%;
+      z-index: 1;
       margin-left: 4rem;
       background-color: transparent;
       transition: all 0.4s ease-in-out;
