@@ -7,11 +7,10 @@ import TicTacToe from "../resources/img/TicTacToe.png";
 import Snake from "../resources/img/Snake.png";
 import FlappyBird from "../resources/img/FlappyBird.png";
 import Bomberman from "../resources/img/Bomberman.png";
-
-const resumeAddress = "./resources/main.pdf";
+import Resume from "../resources/main.pdf";
 
 const descriptionAboutMe =
-  "A software engineer with 5+ years of experience in full-stack development, teamwork, cross-functional communication, technical troubleshooting, and debugging.";
+  "Software engineer with 5+ years in full-stack development, specializing in JavaScript and Python, with strong skills in teamwork, cross-functional communication, technical troubleshooting, and debugging.";
 
 const listAboutItems = [
   {
@@ -78,7 +77,7 @@ const blogList = [
     header: "Resume",
     description: "Hugo Silva Resume",
     img: resume,
-    url: resumeAddress,
+    file: Resume,
   },
 ];
 
@@ -168,7 +167,6 @@ export {
   blogList,
   listSkills,
   listControls,
-  resumeAddress,
   descriptionAboutMe,
   listPortfolioItems,
   listTimelineItems,
