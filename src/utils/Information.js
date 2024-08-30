@@ -1,6 +1,6 @@
-import git from "../resources/img/Git.jpeg";
-import linkedin from "../resources/img/Linkedin.png";
-import resume from "../resources/img/Resume.jpeg";
+import git from "../resources/img/git.jpeg";
+import linkedin from "../resources/img/linkedin.png";
+import resume from "../resources/img/resume.jpeg";
 import PongGame from "../resources/img/PongGame.png";
 import RestauranteChuva from "../resources/img/RestauranteChuva.jpeg";
 import TicTacToe from "../resources/img/TicTacToe.png";
@@ -8,16 +8,15 @@ import Snake from "../resources/img/Snake.png";
 import FlappyBird from "../resources/img/FlappyBird.png";
 import Bomberman from "../resources/img/Bomberman.png";
 
-const resumeAddress =
-  "https://docs.google.com/document/d/1oGCTDu3LleWilob_89vTk9E_LnCCJImJFy2V2TiYS_E/edit?usp=sharing";
+const resumeAddress = "./resources/main.pdf";
 
 const descriptionAboutMe =
-  "A software engineer with 2 years of experience in full-stack development, teamwork, cross-functional communication, technical troubleshooting, and debugging.";
+  "A software engineer with 5+ years of experience in full-stack development, teamwork, cross-functional communication, technical troubleshooting, and debugging.";
 
 const listAboutItems = [
   {
     id: 1,
-    title: "2+ years",
+    title: "5+ years",
     descriptionBegin: "Developing",
     descriptionEnd: "Software",
   },
@@ -164,18 +163,7 @@ const listTimelineItems = [
   },
 ];
 
-const firebaseConfig = {
-  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
-  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
-  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
-  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
-  appId: process.env.REACT_APP_FIREBASE_APP_ID,
-  measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID,
-};
-
 export {
-  firebaseConfig,
   listAboutItems,
   blogList,
   listSkills,

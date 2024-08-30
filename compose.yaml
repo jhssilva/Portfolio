@@ -1,7 +1,7 @@
-version: '1'
 services:
   node:
     image: node:21-alpine3.17
+    container_name: porfolio
     working_dir: /usr/app
     command: sh -c "npm i && npm start"
     ports:

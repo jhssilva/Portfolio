@@ -70,10 +70,7 @@ const MainContent = (props) => {
           <Contacts />
         </section>
       </main>
-      <Controls
-        setActiveElementId={setActiveElementId}
-        activeElementId={activeElementId}
-      />
+
       <DarkMode isDarkModeOn={isDarkMode} setIsDarkMode={setIsDarkMode} />
     </div>
   );

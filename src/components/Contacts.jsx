@@ -197,11 +197,11 @@ const Contacts = (props) => {
               />
             </div>
             <div className="input-control">
-              <ReCAPTCHA
+              {/* <ReCAPTCHA
                 ref={recaptchaRef}
                 sitekey={SITE_KEY}
                 onChange={handleOnChangeReCAPTCHA}
-              />
+              /> */}
             </div>
             <div className="submit-btn">
               <div className="submit-btn-container">
