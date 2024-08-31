@@ -136,7 +136,7 @@ const Contacts = (props) => {
 
   return (
     <div>
-      <MainTitle headerBegin="Contact" headerEnd="Me" text="Contact Me" />
+      <MainTitle headerBegin="Contact" headerEnd="Me" />
       <div className="contact-content-con">
         <div className="left-contact">
           <h4>Hugo Silva</h4>

@@ -1,7 +1,6 @@
 import React from "react";
 import MainTitle from "./MainTitle";
 import DownloadBtn from "./DownloadBtn";
-import ProgressBar from "./ProgressBar";
 import Timeline from "./Timeline";
 import { listAboutItems, listSkills } from "../utils/Information";
 
@@ -51,12 +50,16 @@ const About = (props) => {
     return (
       <div className="about-stats">
         <h4 className="stat-title">My Skills</h4>
-        <div className="progress-bars">
+        <ul>
           {listSkills.map((skill) => {
-            const { id, title } = skill;
-            return <ProgressBar key={id} title={title} />;
+            const { id, title, description } = skill;
+            return (
+              <li key={id}>
+                <b>{title}:</b> {description}
+              </li>
+            );
           })}
-        </div>
+        </ul>
       </div>
     );
   };

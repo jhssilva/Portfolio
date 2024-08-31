@@ -40,20 +40,29 @@ const listAboutItems = [
 ];
 
 const listSkills = [
-  { id: 1, title: "HTML" },
-  { id: 2, title: "CSS" },
+  {
+    id: 1,
+    title: "Programming",
+    description:
+      "Javascript/Typescript, Python, MongoDB, SQL (PostgreSQL), HTML/CSS",
+  },
+  {
+    id: 2,
+    title: "Frameworks",
+    description:
+      "React, Node.js, Flask, TailwindCSS, Bootstrap, FastAPI, Next.js, OutSystems",
+  },
   {
     id: 3,
-    title: "Javascript/Typescript",
+    title: "Developer Tools",
+    description:
+      "Git, Docker, Kubernetes, VS Code, Postman, Visual Studio, PyCharm, IntelliJ, Eclipse, Datadog",
   },
-  { id: 4, title: "React" },
-  { id: 5, title: "Java" },
-  { id: 6, title: "C/C++" },
-  { id: 7, title: "Swift" },
-  { id: 8, title: "Node.js" },
-  { id: 9, title: "MongoDB" },
-  { id: 10, title: "SQL" },
-  { id: 11, title: "Python" },
+  {
+    id: 4,
+    title: "Languages",
+    description: "Portuguese (native), French (beginner), English (fluent)",
+  },
 ];
 
 const blogList = [
@@ -78,14 +87,6 @@ const blogList = [
     img: resume,
     url: Resume,
   },
-];
-
-const listControls = [
-  { id: 1, dataId: "home", icon: "fas fa-home" },
-  { id: 2, dataId: "about", icon: "fas fa-user" },
-  { id: 3, dataId: "portfolio", icon: "fas fa-briefcase" },
-  { id: 4, dataId: "blogs", icon: "fas fa-newspaper" },
-  { id: 5, dataId: "contact", icon: "fas fa-envelope-open" },
 ];
 
 const listPortfolioItems = [
@@ -176,7 +177,6 @@ export {
   listAboutItems,
   blogList,
   listSkills,
-  listControls,
   descriptionAboutMe,
   listPortfolioItems,
   listTimelineItems,

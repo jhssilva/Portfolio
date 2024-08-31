@@ -24,7 +24,7 @@ const Portfolio = () => {
 
   return (
     <div>
-      <MainTitle headerBegin="My" headerEnd="Portfolio" text="My Work" />
+      <MainTitle headerBegin="My" headerEnd="Portfolio" />
       <p className="port-text">
         Here is some of my work that I've done in various programming languages.
       </p>
