@@ -77,7 +77,7 @@ const blogList = [
     header: "Resume",
     description: "Hugo Silva Resume",
     img: resume,
-    file: Resume,
+    url: Resume,
   },
 ];
 
