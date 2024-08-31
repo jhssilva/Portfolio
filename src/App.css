@@ -524,6 +524,9 @@ section {
   color: var(--color-pallet-1);
   resize: none;
 }
+.contact-content-con .right-contact .input-control ::placeholder {
+  color: var(--color-grey0);
+}
 .contact-content-con .right-contact .i-c-2 {
   display: flex;
 }
@@ -551,6 +554,7 @@ section {
   background: transparent;
   border-radius: 0;
   cursor: pointer;
+  z-index: 1;
 }
 .contact-content-con .right-contact .submit-btn .submit-btn-container::before {
   content: "";
@@ -559,7 +563,7 @@ section {
   right: 0;
   transform: translateX(-100%);
   transition: all 0.4s ease-out;
-  z-index: -1;
+  z-index: 0;
 }
 .contact-content-con .right-contact .submit-btn .submit-btn-container:hover {
   transition: all 0.4s ease-out;
