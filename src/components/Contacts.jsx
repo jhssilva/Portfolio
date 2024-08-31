@@ -2,7 +2,7 @@ import React, { useState, createRef } from "react";
 import MainTitle from "./MainTitle";
 import emailjs from "@emailjs/browser";
 import ReCAPTCHA from "react-google-recaptcha";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 
 const Contacts = (props) => {
   const { isDarkMode } = props;
@@ -197,11 +197,11 @@ const Contacts = (props) => {
               />
             </div>
             <div className="input-control">
-              {/* <ReCAPTCHA
+              <ReCAPTCHA
                 ref={recaptchaRef}
                 sitekey={SITE_KEY}
                 onChange={handleOnChangeReCAPTCHA}
-              /> */}
+              />
             </div>
             <div className="submit-btn">
               <div className="submit-btn-container">
