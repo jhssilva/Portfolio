@@ -53,15 +53,8 @@ const About = (props) => {
         <h4 className="stat-title">My Skills</h4>
         <div className="progress-bars">
           {listSkills.map((skill) => {
-            const { id, title, description, classValue } = skill;
-            return (
-              <ProgressBar
-                key={id}
-                title={title}
-                description={description}
-                classValue={classValue}
-              />
-            );
+            const { id, title } = skill;
+            return <ProgressBar key={id} title={title} />;
           })}
         </div>
       </div>

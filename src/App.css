@@ -324,6 +324,9 @@ section {
   padding-left: 3rem;
   border-left: 1px solid var(--color-pallet-2);
 }
+.timeline .timeline-item ul li {
+  list-style: inside;
+}
 .timeline .timeline-item .tl-icon {
   position: absolute;
   left: -27px;

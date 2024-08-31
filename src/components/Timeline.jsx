@@ -14,7 +14,11 @@ const Timeline = () => {
         <h5>
           {titleBegin} <span> - {titleEnd}</span>
         </h5>
-        <p>{description}</p>
+        <ul>
+          {description.map((item) => {
+            return <li>{item}</li>;
+          })}
+        </ul>
       </div>
     );
   };

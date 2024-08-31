@@ -40,21 +40,20 @@ const listAboutItems = [
 ];
 
 const listSkills = [
-  { id: 1, title: "HTML", description: "95%", classValue: "html" },
-  { id: 2, title: "CSS", description: "90%", classValue: "css" },
+  { id: 1, title: "HTML" },
+  { id: 2, title: "CSS" },
   {
     id: 3,
     title: "Javascript/Typescript",
-    description: "85%",
-    classValue: "javascript",
   },
-  { id: 4, title: "React", description: "60%", classValue: "react" },
-  { id: 5, title: "Java", description: "80%", classValue: "java" },
-  { id: 6, title: "C/C++", description: "85%", classValue: "c" },
-  { id: 7, title: "Swift", description: "80%", classValue: "swift" },
-  { id: 8, title: "Node.js", description: "70%", classValue: "node" },
-  { id: 9, title: "MongoDB", description: "55%", classValue: "mongodb" },
-  { id: 10, title: "SQL", description: "80%", classValue: "sql" },
+  { id: 4, title: "React" },
+  { id: 5, title: "Java" },
+  { id: 6, title: "C/C++" },
+  { id: 7, title: "Swift" },
+  { id: 8, title: "Node.js" },
+  { id: 9, title: "MongoDB" },
+  { id: 10, title: "SQL" },
+  { id: 11, title: "Python" },
 ];
 
 const blogList = [
@@ -134,31 +133,42 @@ const listTimelineItems = [
     duration: "Nov 2023 - Present",
     titleBegin: "Technical Support 2",
     titleEnd: "Datadog",
-    description:
-      "Engage with customers via multiple channels (ticketing system, live chat, and screensharing tools) to identify and resolve technical support requests while continuing to educate our clients on the use of the platform.",
+    description: [
+      "Engaged with customers via multiple channels (ticketing system, live chat, and screen sharing tools) to identify and resolve technical support requests while continuing to educate our clients on the use of the platform",
+      "Resolved 70% more tickets than the target, maintaining a 99% customer satisfaction rating, earning the Top Dog Award for Q2 2024",
+    ],
   },
   {
     id: 2,
     duration: "Sept 2021 - Oct 2023",
     titleBegin: "Senior Technical Support Engineer",
     titleEnd: "Usercentrics",
-    description:
-      "Supports the customers by integrating software products like the Consent Management Platform (CMP) on the customer platform (e.g. Website, Applications).",
+    description: [
+      "Supported customers by integrating software products on the customer platforms (e.g. Website, Applications), using Javascript, HTML/CSS, SWIFT, Kotlin, GraphQL, React Native, and Flutter",
+      "Coached and trained more than 5 new team members, providing guidance and support",
+      "Delegated, wrote and maintained documentation on the tech support team. (e.g. common problems, technical implementations, FAQ). Reduced the overall ticket numbers by more than 20%",
+    ],
   },
   {
     id: 3,
     duration: "Feb 2020 - Aug 2021",
     titleBegin: "Junior Solutions Developer",
     titleEnd: "Truewind",
-    description:
-      "Collaborate with other teams analyzing requirements, and developing software for day-to-day platforms (e.g. Website and Mobile) using SCRUM methodology.",
+    description: [
+      "Developed a mobile platform with 80,000+ monthly active users using JavaScript, HTML/CSS, SQL, C#, OutSystems, Firebase, and AWS S3 Buckets",
+      "Collaborated with 4+ teams at large organizations to diagnose new features and current issues, and write and develop software requirements using the SCRUM methodology",
+    ],
   },
   {
     id: 4,
     duration: "2019 - 2020",
     titleBegin: "Full Stack Developer",
     titleEnd: "Enso Origins",
-    description: "Develop, test, and implement new software programs.",
+    description: [
+      "Successfully engineered 2 web platforms that increased the company’s productivity by more than 200%, using PHP, HTML/CSS, Javascript, PostgreSQL, Rest APIS, Git, Docker, Composer, and other frameworks",
+      "Engineered software that enabled the enterprise to manage (e.g. create, read, update, delete (CRUD)) accounts in 10+ different software platforms (e.g. LDAP, Jira, Git), providing easy scalability (e.g. adding a service with only 2 entries on a JSON file) and instantly create/delete of accounts with just one click",
+      "Developed and maintained system design documents. (e.g. proofs of concept, requirements specification) and collaborated with the CEO to scope milestones and delivery estimates on the project’s progress",
+    ],
   },
 ];
 
