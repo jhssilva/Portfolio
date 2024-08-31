@@ -15,8 +15,8 @@ const Timeline = () => {
           {titleBegin} <span> - {titleEnd}</span>
         </h5>
         <ul>
-          {description.map((item) => {
-            return <li>{item}</li>;
+          {description.map((item, index) => {
+            return <li key={index}>{item}</li>;
           })}
         </ul>
       </div>
