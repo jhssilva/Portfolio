@@ -2,7 +2,7 @@ import React, { useState, createRef } from "react";
 import MainTitle from "./MainTitle";
 import emailjs from "@emailjs/browser";
 import ReCAPTCHA from "react-google-recaptcha";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 
 const Contacts = (props) => {
   const { isDarkMode } = props;
@@ -136,17 +136,17 @@ const Contacts = (props) => {
 
   return (
     <div>
-      <MainTitle headerBegin="Contact" headerEnd="Me" text="Contact Me" />
+      <MainTitle headerBegin="Contact" headerEnd="Me" />
       <div className="contact-content-con">
         <div className="left-contact">
           <h4>Hugo Silva</h4>
           <p>
-            I'm a software engineer, always opening to new opportunities to
-            grow!
+            I'm a passionate software engineer, eager to embrace new challenges
+            and opportunities for growth!
           </p>
           <p>
-            Please don't hesitate reaching out to me. I'm hoping to know a
-            little bit more about you!
+            I'd love to connect with you! Feel free to reach out—I'm excited to
+            learn more about you and how we can collaborate.
           </p>
           <div className="contact-info">
             <Contact />

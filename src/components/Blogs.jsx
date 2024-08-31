@@ -22,7 +22,7 @@ const Blogs = () => {
 
   return (
     <div>
-      <MainTitle headerBegin="My" headerEnd="Blogs" text="My Blogs" />
+      <MainTitle headerBegin="My" headerEnd="Blogs" />
       <div className="blogs">
         {blogList.map((blog) => {
           const { id, img, header, description, url } = blog;

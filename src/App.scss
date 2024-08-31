@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   list-style: none;
+  color: var(--color-body);
 }
 
 :root {
@@ -54,6 +55,7 @@ a {
 
 header {
   min-height: 100vh;
+  background-color: var(--color-primary);
   color: var(--color-header);
   overflow: hidden;
   padding: 0 !important;
@@ -73,75 +75,11 @@ p {
 section {
   min-height: 100vh;
   width: 100%;
-  position: absolute;
+  // position: absolute;
   left: 0;
   top: 0;
   padding: 3rem 18rem;
-}
-
-.container {
-  display: none;
-  transform: translateY(-100%) scale(0);
-  transition: all 0.4s ease-in-out;
   background-color: var(--color-primary);
-}
-
-.active {
-  display: block;
-  animation: appear 1s ease-in-out;
-  transform: translateY(0) scaleY(1);
-
-  @keyframes appear {
-    0% {
-      transform: translateY(-100%) scaleY(0);
-    }
-
-    100% {
-      transform: translateY(0) scaleY(1);
-    }
-  }
-}
-
-//Controls
-.controls {
-  position: fixed;
-  z-index: 10;
-  top: 50%;
-  right: 3%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  transform: translateY(-50%);
-
-  .control {
-    padding: 1rem;
-    cursor: pointer;
-    background-color: var(--color-pallet-2);
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0.7rem 0;
-    box-shadow: var(--box-shadow-1);
-
-    i {
-      font-size: 1.2rem;
-      color: var(--color-pallet-1);
-      pointer-events: none;
-    }
-  }
-
-  .active-btn {
-    background-color: var(--color-secondary);
-    transition: all 0.4s ease-in-out;
-
-    i {
-      color: var(--color-white);
-    }
-  }
 }
 
 .theme-btn {
@@ -189,7 +127,7 @@ section {
       position: absolute;
       left: 0;
       top: 0;
-      z-index: -1;
+      z-index: 0;
       clip-path: polygon(0 0, 46% 0, 79% 100%, 0% 100%);
     }
 
@@ -197,6 +135,7 @@ section {
       border-radius: var(--br-sm-2);
       height: 90%;
       width: 68%;
+      z-index: 1;
       margin-left: 4rem;
       background-color: transparent;
       transition: all 0.4s ease-in-out;
@@ -312,84 +251,8 @@ section {
 .about-stats {
   padding-bottom: 4rem;
 
-  .progress-bars {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 2rem;
-
-    .progress-bar {
-      display: flex;
-      flex-direction: column;
-
-      .prog-title {
-        text-transform: uppercase;
-        font-weight: 700;
-        color: var(--color-header);
-      }
-
-      .progress-con {
-        display: flex;
-        align-items: center;
-
-        .prog-text {
-          color: var(--color-body);
-        }
-
-        .progress {
-          width: 100%;
-          height: 0.45rem;
-          background-color: var(--color-pallet-2);
-          margin-left: 1rem;
-          position: relative;
-
-          span {
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            background-color: var(--color-secondary);
-            transition: all 0.4s ease-in-out;
-            width: 60%;
-          }
-
-          .html {
-            width: 95%;
-          }
-
-          .css {
-            width: 90%;
-          }
-
-          .javascript {
-            width: 85%;
-          }
-
-          .react {
-            width: 60%;
-          }
-
-          .c {
-            width: 85%;
-          }
-
-          .swift {
-            width: 80%;
-          }
-
-          .node {
-            width: 70%;
-          }
-
-          .mongodb {
-            width: 55%;
-          }
-
-          .sql {
-            width: 80%;
-          }
-        }
-      }
-    }
+  li {
+    list-style: inside;
   }
 }
 
@@ -423,6 +286,12 @@ section {
     position: relative;
     padding-left: 3rem;
     border-left: 1px solid var(--color-pallet-2);
+
+    ul {
+      li {
+        list-style: inside;
+      }
+    }
 
     .tl-icon {
       position: absolute;
@@ -723,6 +592,10 @@ section {
         color: var(--color-pallet-1);
         resize: none;
       }
+
+      ::placeholder {
+        color: var(--color-grey0);
+      }
     }
 
     .i-c-2 {
@@ -754,6 +627,7 @@ section {
           background: transparent;
           border-radius: 0;
           cursor: pointer;
+          z-index: 1;
         }
 
         &::before {
@@ -763,7 +637,7 @@ section {
           right: 0;
           transform: translateX(-100%);
           transition: all 0.4s ease-out;
-          z-index: -1;
+          z-index: 0;
         }
 
         &:hover {
@@ -798,10 +672,12 @@ section {
   align-self: flex-start;
   align-items: center;
   overflow: hidden;
+  cursor: pointer;
 
   .btn-text {
     padding: 0 2rem;
     color: var(--color-body);
+    z-index: 1;
   }
 
   .btn-icon {
@@ -820,7 +696,7 @@ section {
     right: 0;
     transform: translateX(100%);
     transition: all 0.4s ease-out;
-    z-index: -1;
+    z-index: 0;
   }
 
   &:hover {
@@ -833,6 +709,10 @@ section {
       transform: translateX(0);
       transition: all 0.4s ease-out;
     }
+  }
+
+  .fa-download {
+    z-index: 1;
   }
 }
 

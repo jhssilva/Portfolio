@@ -5,75 +5,33 @@ import Portfolio from "./Portfolio";
 import DarkMode from "./DarkMode";
 import Blogs from "./Blogs";
 import Contacts from "./Contacts";
-import Controls from "./Controls";
 import { descriptionAboutMe } from "../utils/Information";
 
 const MainContent = (props) => {
-  const [activeElementId, setActiveElementId] = useState(1);
   const { isDarkMode, setIsDarkMode } = props;
-
-  const checkIfHasToDisplayCurrentSection = (id) => {
-    if (id === activeElementId) {
-      return true;
-    }
-    return false;
-  };
 
   return (
     <div
       className={"main-content " + (isDarkMode ? "dark-mode" : "light-mode")}
     >
-      <header
-        className={
-          "container header " +
-          (checkIfHasToDisplayCurrentSection(1) ? "active" : "")
-        }
-        id="home"
-      >
+      <header className={"container header"} id="home">
         <Header description={descriptionAboutMe} />{" "}
       </header>
       <main>
-        <section
-          className={
-            "container " +
-            (checkIfHasToDisplayCurrentSection(2) ? "active" : "")
-          }
-          id="about"
-        >
+        <section className={"container"} id="about">
           <About description={descriptionAboutMe} />
         </section>
-        <section
-          className={
-            "container " +
-            (checkIfHasToDisplayCurrentSection(3) ? "active" : "")
-          }
-          id="porfolio"
-        >
+        <section className={"container"} id="porfolio">
           <Portfolio />
         </section>
-        <section
-          className={
-            "container " +
-            (checkIfHasToDisplayCurrentSection(4) ? "active" : "")
-          }
-          id="blogs"
-        >
+        <section className={"container"} id="blogs">
           <Blogs />
         </section>
-        <section
-          className={
-            "container " +
-            (checkIfHasToDisplayCurrentSection(5) ? "active" : "")
-          }
-          id="contacts"
-        >
+        <section className={"container"} id="contacts">
           <Contacts />
         </section>
       </main>
-      <Controls
-        setActiveElementId={setActiveElementId}
-        activeElementId={activeElementId}
-      />
+
       <DarkMode isDarkModeOn={isDarkMode} setIsDarkMode={setIsDarkMode} />
     </div>
   );
